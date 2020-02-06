@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+/**
+ * main - Description
+ *
+ *
+ * Return: 0
+ */
+
+int main(void)
+{
+	int i;
+	int j;
+
+	for (i = 48; i < 58; i++)
+	{
+		for (j = 49; j < 58; j++)
+		{
+			if (j > i)
+			{
+				putchar(i);
+				putchar(j);
+
+				if (i + j != 113)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
+}
