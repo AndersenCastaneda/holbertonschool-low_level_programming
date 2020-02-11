@@ -1,7 +1,15 @@
 #include "holberton.h"
-#include <stdlib.h>
+
+/**
+ * _abs - absolute number.
+ * @n: number.
+ * Return: Always 0.
+ */
 
 int _abs(int i)
 {
-	return (abs(i));
+	if (i >= 0)
+		return (i);
+	else
+		return(-i);
 }
