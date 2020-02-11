@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * print_sign - positive, zero or negative
+ * @n: number.
+ * Return: 1 if is positive, 0 if is zero, -1 if is negative
+ */
+
 int print_sign(int n)
 {
 	if (n > 0)
