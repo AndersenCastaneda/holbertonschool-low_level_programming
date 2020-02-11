@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	int i;
 	long int j = 0, k = 1, sum = 0, tmp, evn = 0;
 	long int lim = 4000000;
 
