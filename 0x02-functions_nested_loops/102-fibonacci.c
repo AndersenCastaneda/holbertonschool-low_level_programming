@@ -9,14 +9,15 @@
 int main(void)
 {
 	int i;
-	long int j = 0, k = 1, sum = 0;
+	long int j = 0, k = 1, sum = 0, tmp;
 
 	for (i = 1; i <= 50; i++)
 	{
 		sum = j + k;
-		long int tmp = k;
+		tmp = k;
 		k = sum;
 		j = tmp;
+
 		if (i != 50)
 			printf("%li, ", sum);
 		else
