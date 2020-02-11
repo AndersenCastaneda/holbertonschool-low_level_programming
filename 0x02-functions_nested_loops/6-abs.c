@@ -1,15 +1,15 @@
 #include "holberton.h"
 
 /**
- * _abs - absolute number.
+ * _abs - Return the absolute value
  * @n: number.
- * Return: Always 0.
+ * Return: Absolute value
  */
 
-int _abs(int i)
+int _abs(int n)
 {
-	if (i < 0)
-		return(i * (-1));
-	else
-		return (i);
+	if (n < 0)
+		n = n * (-1);
+
+	return (n);
 }
