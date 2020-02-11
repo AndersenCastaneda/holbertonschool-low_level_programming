@@ -1,5 +1,11 @@
 #include "holberton.h"
 
+/**
+ * jack_bauer - Hours.
+ *
+ * Return: Always 0.
+ */
+
 void jack_bauer(void)
 {
 	int i;
