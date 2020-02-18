@@ -5,19 +5,19 @@
  * @s: input (string)
  * Return: int
  */
+
 int _atoi(char *s)
 {
 	int i, j, k;
 
 	j = 0;
 	k = 0;
-	for (i = 0; s[i] != '\0'; i++)
+
+	while ((s[i] <= '1' || s[i] >= '9') && s[i] != '\0')
 	{
 		if (s[i] == '-')
-			++j;
-
-		if (s[i] >= '0' && s[i] <= '9')
-			break;
+			j++;
+		i++;
 	}
 
 	while (s[i] >= '0' && s[i] <= '9')
