@@ -11,15 +11,18 @@ int _atoi(char *s)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
-			j++;
-
 		if (s[i] >= '0' && s[i] <= '9')
 			break;
+
+		if (s[i] == '-')
+			j++;
 	}
 
 	while (s[i] >= '0' && s[i] <= '9')
 	{
+		if (s[i] == '\0')
+			break;
+
 		n = (n * 10) + (s[i] - '0');
 		i++;
 	}
