@@ -1,7 +1,7 @@
 /**
- * _strcpy - copy the pointer of a string to another pointer
- * @dest: input
- * @src: input
+ * _strcpy - function that copy a string
+ * @dest: variable to save the copy
+ * @src: variable to copy
  * Return: void
  */
 
@@ -10,12 +10,12 @@ char *_strcpy(char *dest, char *src)
 	int i;
 
 	i = 0;
-	do
-	{
+	do {
 		*(dest + i) = *(src + i);
 		i++;
 	} while (src[i] != '\0');
-	*(dest + i ) = '\0';
 
-	return dest;
+	*(dest + i) = '\0';
+
+	return (dest);
 }
