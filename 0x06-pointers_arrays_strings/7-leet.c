@@ -16,7 +16,7 @@ char *leet(char *c)
 		for (j = 0; lower[j] != '\0'; j++)
 		{
 			if (c[i] == lower[j] || c[i] == upper[j])
-				c[i] = rep [j];
+				c[i] = rep[j];
 		}
 	}
 
