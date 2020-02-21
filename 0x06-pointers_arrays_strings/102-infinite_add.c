@@ -22,7 +22,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	if (i + 2 > size_r || j + 2 > size_r)
 		return (0);
 
-	for ( ; i >= 0 || j >= 0; --i, --j, k++)
+	for ( ; i >= 0 || j >= 0; i--, j--, k++)
 	{
 		s = 0;
 		if (i >= 0)
