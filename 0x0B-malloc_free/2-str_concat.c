@@ -13,18 +13,20 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i = 0, j = 0, k, len;
 	char *s;
 
-	if (s1 == NULL || s2 == NULL)
-	{
-		if (s1 == NULL)
-			s1 = "";
-		if (s2 == NULL)
-			s2 = "";
-	}
+	if (s1 == NULL)
+		s1 = "";
 	else
 	{
 		while (s1[i])
 			i++;
+	}
 
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	else
+	{
 		while (s2[j])
 			j++;
 	}
