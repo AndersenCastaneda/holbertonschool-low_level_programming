@@ -5,9 +5,9 @@
  * *argstostr - concatenates all the arguments of the program
  * @ac: input
  * @av: input
- *
- * Return: Pointer to the new string (Success), NULL (Error)
+ * Return: pointer or NULL
  */
+
 char *argstostr(int ac, char **av)
 {
 	char *ptr;
@@ -18,21 +18,21 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != NULL; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			len++;
 		}
 		len++;
 	}
 
-	ptr = malloc(sizeof(char) * len + 1);
+	ptr = malloc(sizeof(char) * (len + 1));
 
 	if (ptr == NULL)
 		return (NULL);
 
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != NULL; j++)
+		for (j = 0; av[i][j] != '\0'; j++)
 		{
 			ptr[k] = av[i][j];
 			k++;
