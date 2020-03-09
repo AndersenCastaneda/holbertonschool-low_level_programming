@@ -11,9 +11,6 @@
 void print_dog(struct dog *d)
 {
 	if (d == NULL)
-		d = malloc(sizeof(struct dog));
-
-	if (d == NULL)
 		return;
 
 	if ((*d).name == '\0')
