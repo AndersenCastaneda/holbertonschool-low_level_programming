@@ -4,8 +4,6 @@
  * get_op_func - selects the correct function
  * to perform the operation asked by the user
  * @s: operator (char)
- * @a: first number
- * @b: second number
  * Return: int
  */
 int (*get_op_func(char *s))(int, int)
