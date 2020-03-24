@@ -11,7 +11,7 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	unsigned int i;
 	listint_t *temp = malloc(sizeof(listint_t));
 
-	if (!head)
+	if (!head || !temp)
 		return (NULL);
 
 	temp = head;
