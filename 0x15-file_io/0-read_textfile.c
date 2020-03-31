@@ -34,13 +34,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	_read = read(_file, buffer, letters);
 	if (_read == -1)
+	{
+		close(_file);
 		return (free_buffer(buffer));
+	}
 
 	buffer[letters] = '\0';
 
-	_write = write(1, buffer, _read);
-	if (!_write)
+	_write = write(STDOUT_FILENO, buffer, _read);
+	if (_write == -1)
+	{
+		close(_file);
 		return (free_buffer(buffer));
+	}
 
 	close(_file);
 	return (_write);
