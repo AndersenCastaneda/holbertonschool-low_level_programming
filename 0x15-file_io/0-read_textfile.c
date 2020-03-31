@@ -22,7 +22,7 @@ int free_buffer(char *buffer)
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int _file, _read, _write;
+	ssize_t _file, _read, _write;
 	char *buffer = malloc(sizeof(char) * letters);
 
 	if (!filename || !buffer)
