@@ -1,18 +1,6 @@
 #include "holberton.h"
 
 /**
- * free_buffer - frees a buffer from memory
- * @buffer: buffer to frees
- * Return: Allways 0
- */
-int free_buffer(char *buffer)
-{
-	if (buffer)
-		free(buffer);
-	return (0);
-}
-
-/**
  * read_textfile - reads a text file and prints it to the
  * POSIX standard output.
  * @filename: file to read
@@ -37,7 +25,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (_read == -1)
 	{
 		close(_file);
-		return (free_buffer(buffer));
+		free(buffer);
+		return (0);
 	}
 
 	buffer[letters] = '\0';
@@ -46,9 +35,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (_write == -1)
 	{
 		close(_file);
-		return (free_buffer(buffer));
+		free(buffer);
+		return (0);
 	}
 
 	close(_file);
+	free(buffer);
 	return (_write);
 }
