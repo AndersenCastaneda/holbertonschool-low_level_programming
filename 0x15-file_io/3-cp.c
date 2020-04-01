@@ -8,7 +8,7 @@
  */
 int main(int argc, char **argv)
 {
-	int _file1, _file2, _read = 1024, count = 0;
+	int _file1, _file2, _read = 1024, _write = 0;
 	char buffer[BUFFER_SIZE];
 
 	if (argc != 3)
@@ -28,8 +28,8 @@ int main(int argc, char **argv)
 		if (_read == -1)
 			dprintf(STDERR_FILENO, FILE_READ_ERROR, argv[1]), exit(98);
 
-		count = write(_file2, buffer, _read);
-		if (count == -1)
+		_write = write(_file2, buffer, _read);
+		if (_write == -1)
 			dprintf(STDERR_FILENO, FILE_WRITE_ERROR, argv[2]), exit(99);
 	}
 	if (close(_file1) == -1)
