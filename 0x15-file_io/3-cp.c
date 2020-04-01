@@ -28,7 +28,7 @@ int main(int argc, char **argv)
 		if (_read == -1)
 			dprintf(STDERR_FILENO, FILE_READ_ERROR, argv[1]), exit(98);
 
-		count = write(_file2, buffer, BUFFER_SIZE);
+		count = write(_file2, buffer, _read);
 		if (count == -1)
 			dprintf(STDERR_FILENO, FILE_WRITE_ERROR, argv[2]), exit(99);
 	}
