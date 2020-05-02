@@ -7,21 +7,19 @@
  */
 size_t print_dlistint(const dlistint_t *h)
 {
-	const dlistint_t *head = malloc(sizeof(dlistint_t));
 	size_t count = 0;
 
-	if (!head)
-		exit(EXIT_FAILURE);
+	if (!h)
+		return (0);
 
-	head = h;
-	while (head && head->prev)
-		head = head->prev;
+	while (h && h->prev)
+		h = h->prev;
 
-	while (head)
+	while (h)
 	{
-		printf("%d\n", head->n);
+		printf("%d\n", h->n);
 		count++;
-		head = head->next;
+		h = h->next;
 	}
 
 	return (count);
