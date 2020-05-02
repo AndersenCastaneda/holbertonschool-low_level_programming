@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ * print_dlistint - Prints all elements of a linked list
+ * @h: head of the linked list
+ * Return: number of elements
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
 	const dlistint_t *head = malloc(sizeof(dlistint_t));
