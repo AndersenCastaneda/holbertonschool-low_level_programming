@@ -16,36 +16,11 @@ unsigned int last_index(dlistint_t *head)
 }
 
 /**
- * rmv_dnodeint - Remove a node at the beginning of a dlistint_t list
- * @head: Head if the linked list
- * Return: The address of the new head
- */
-dlistint_t *rmv_dnodeint(dlistint_t *head)
-{
-	if (!head)
-		return (NULL);
-
-	if (head->next)
-	{
-		head = head->next;
-		free(head->prev);
-		head->prev = NULL;
-	}
-	else
-	{
-		free(head);
-		head = NULL;
-	}
-
-	return (head);
-}
-
-/**
  * delete_dnodeint_at_index - Deletes the node at index index of a
  * dlistint_t linked list
  * @head: dlistint_t linked list
  * @index: Index to delete
- * Returns: 1 if it succeeded, -1 if it failed
+ * Return: 1 if it succeeded, -1 if it failed
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
@@ -57,7 +32,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	if (index == 0)
 	{
-		*head = rmv_dnodeint(*head);
+		*head = h->next;
+		if (h->next)
+			h->next->prev = NULL;
+		h->next = NULL;
+		free(h);
 		return (1);
 	}
 
