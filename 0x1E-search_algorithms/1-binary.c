@@ -31,19 +31,19 @@ int binary_search(int *array, size_t size, int value)
 {
 	size_t start = 0, end = size - 1, num;
 
-	if (!array)
-		return (-1);
-
-	while (start <= end)
+	if (array && size > 0)
 	{
-		print_array(array, start, end);
-		num = (start + end) / 2;
-		if (value == array[num])
-			return (num);
-		else if (value < array[num])
-			end = num - 1;
-		else
-			start = num + 1;
+		while (start <= end)
+		{
+			print_array(array, start, end);
+			num = (start + end) / 2;
+			if (value == array[num])
+				return (num);
+			else if (value < array[num])
+				end = num - 1;
+			else
+				start = num + 1;
+		}
 	}
 
 	return (-1);
