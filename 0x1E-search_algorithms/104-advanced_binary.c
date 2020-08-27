@@ -19,6 +19,15 @@ void print_array(int *array, size_t start, size_t end)
 	}
 }
 
+/**
+ * binary_search_recursive - binary algorithm in recursion
+ * @array: The array to search in
+ * @value: Value to search for
+ * @start: Start of the array
+ * @end: End of the array
+ * Return: The index where value was found, if the value
+ * is not found or array is null return -1
+ */
 int binary_search_recursive(int *array, int value, size_t start, size_t end)
 {
 	size_t mid = (start + end) / 2;
