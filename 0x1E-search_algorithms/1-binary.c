@@ -20,7 +20,7 @@ void print_array(int *array, size_t start, size_t end)
  * @size: Lenght of the array
  * @value: Value to search for
  * Return: The index where value was found, if the value
- * is not found or array is null return -1
+ * is not found or array is null return -1.
  */
 int binary_search(int *array, size_t size, int value)
 {
